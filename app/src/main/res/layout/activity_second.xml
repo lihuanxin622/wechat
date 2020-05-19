@@ -34,9 +34,12 @@
                 android:text="アカウント"/>
 
             <EditText
+                android:id="@+id/user_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="20dp"
+                android:hint="アカウント入力"
+                android:singleLine="true"
                 android:layout_marginTop="1dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"/>
@@ -50,11 +53,13 @@
                 android:text="パスワード"/>
 
             <EditText
+                android:id="@+id/et_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="20dp"
                 android:layout_marginTop="1dp"
                 android:layout_marginLeft="10dp"
+                android:hint="パスワード入力"
                 android:layout_marginRight="10dp"/>
 
         </LinearLayout>
@@ -81,7 +86,7 @@
             android:text="パスワードを忘れましたか？"/>
 
         <Button
-            android:id="@+id/user"
+            android:id="@+id/user1"
             android:layout_width="380dp"
             android:layout_height="wrap_content"
             android:background="#E4E3E3"

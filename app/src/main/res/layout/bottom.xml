@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+    android:layout_alignParentTop="true"
+    >
+    <RadioGroup android:orientation="horizontal"
+    android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <RadioButton
+        android:layout_width="0dp"
+        android:layout_weight="1"
+    android:layout_height="wrap_content"
+    android:drawableTop="@drawable/four"
+    android:checked="true"
+    android:text="@string/チャット"
+    style="@style/AppTheme"
+    android:button="@null"
+    android:gravity="center"
+    />
+    <RadioButton
+        android:layout_width="0dp"
+        android:layout_weight="1"
+    android:layout_height="wrap_content"
+    android:drawableTop="@drawable/two"
+    android:text="@string/連絡先"
+    style="@style/AppTheme"
+    android:button="@null"
+    android:gravity="center"
+    />
+    <RadioButton
+        android:layout_width="0dp"
+        android:layout_weight="1"
+    android:layout_height="wrap_content"
+    android:drawableTop="@drawable/three"
+    android:text="@string/発見"
+    style="@style/AppTheme"
+    android:button="@null"
+    android:gravity="center" />
+
+        <RadioButton
+            style="@style/AppTheme"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/one"
+            android:gravity="center"
+            android:text="@string/自分" />
+    </RadioGroup>
+    </LinearLayout>
+
+    </RelativeLayout>

@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">wechat3</string>
+    <string name="チャット"></string>
+    <string name="連絡先"></string>
+    <string name="発見"></string>
+    <string name="自分"></string>
 </resources>

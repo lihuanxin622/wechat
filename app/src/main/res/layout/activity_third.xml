@@ -51,9 +51,29 @@
                 android:text="アカウント入力"/>
 
             <EditText
+                android:id="@+id/et_user_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="10dp"
+                android:hint="アカウント入力"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:textSize="20dp"
+                android:text="パスワード"/>
+
+            <EditText
+                android:id="@+id/et_user_password1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="20dp"
+                android:hint="パスワード入力"
                 android:layout_marginTop="1dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"/>
@@ -64,12 +84,14 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp"
                 android:textSize="20dp"
-                android:text="アカウント再確認"/>
+                android:text="パスワード再確認"/>
 
             <EditText
+                android:id="@+id/et_user_password2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="20dp"
+                android:hint="パスワード再確認"
                 android:layout_marginTop="1dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"/>
@@ -77,12 +99,12 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/next"
+            android:id="@+id/user2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="25dp"
             android:layout_marginTop="10dp"
-            android:text="次へ"/>
+            android:text="新規"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
