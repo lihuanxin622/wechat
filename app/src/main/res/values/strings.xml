@@ -1,7 +1,8 @@
 <resources>
-    <string name="app_name">wechat3</string>
-    <string name="チャット"></string>
-    <string name="連絡先"></string>
-    <string name="発見"></string>
-    <string name="自分"></string>
+    <string name="app_name">wechat</string>
+    <string name="wechat_text">チャット</string>
+    <string name="lian_text">連絡先</string>
+    <string name="find_text">発見</string>
+    <string name="me_text">自分</string>
+
 </resources>

@@ -1,5 +1,10 @@
 package com.example.wechat3;
 
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.text.TextUtils;
+import android.util.Xml;
+
 import androidx.appcompat.app.AppCompatActivity;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -19,14 +24,14 @@ public class MD5UtilsActivity extends AppCompatActivity {
             StringBuffer sb = new StringBuffer();
             // result数组，digest.digest ( ); -> text.getBytes();
             // for 循环数组byte[] result;
-            for (byte b : result){
+            for (byte b : result) {
                 // 0xff 为16进制
                 int number = b & 0xff;
                 // number值 转换 字符串 Integer.toHexString( );
                 String hex = Integer.toHexString(number);
-                if (hex.length() == 1){
-                    sb.append("0"+hex);
-                }else {
+                if (hex.length() == 1) {
+                    sb.append("0" + hex);
+                } else {
                     sb.append(hex);
                 }
             }

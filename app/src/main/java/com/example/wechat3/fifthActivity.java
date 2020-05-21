@@ -36,9 +36,6 @@ public class fifthActivity extends AppCompatActivity {
         img_yzm = findViewById(R.id.img_yzm);
         back = findViewById(R.id.back);
         next = findViewById(R.id.next);
-        password1 = findViewById(R.id.psw1);
-        password2 = findViewById(R.id.psw2);
-
 
         bitmap = CodeUtils.getInstance().createBitmap();
         //获取当前图片验证码的对应内容用于校验
@@ -66,8 +63,6 @@ public class fifthActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String user = name.getText().toString().trim();
                 String yzm1 = yzm.getText().toString().trim();
-                String psw1 = password1.getText().toString().trim();
-                String psw2 = password2.getText().toString().trim();
 
                 if (TextUtils.isEmpty(user)) {
                     Toast.makeText(fifthActivity.this, "请输入用户名", Toast.LENGTH_SHORT).show();
@@ -79,43 +74,15 @@ public class fifthActivity extends AppCompatActivity {
                 } else if (!yzm1.equals(code)) {
                     Toast.makeText(fifthActivity.this, "输入验证码不一样", Toast.LENGTH_SHORT).show();
                     return;
-                } else if (TextUtils.isEmpty(psw1)) {
-                    Toast.makeText(fifthActivity.this, "请输入新密码", Toast.LENGTH_SHORT).show();
-                    return;
-                } else if (TextUtils.isEmpty(psw2)) {
-                    Toast.makeText(fifthActivity.this, "请再次输入新密码", Toast.LENGTH_SHORT).show();
-                    return;
-                } else if (!psw1.equals(psw2)) {
-                    Toast.makeText(fifthActivity.this, "两次输入的新密码不一致", Toast.LENGTH_SHORT).show();
-                    return;
                 } else {
                     //一致登录成功
                     Toast.makeText(fifthActivity.this, "输入正确", Toast.LENGTH_SHORT).show();
                     //修改登录成功后保存在SharedPreferences中的密码
-                    Intent intent = new Intent(fifthActivity.this, secondActivity.class);
+                    Intent intent = new Intent(fifthActivity.this, passwordchangeActivity.class);
                     startActivity(intent);
-                    fifthActivity.this.finish();//关闭当前界面
                 }
             }
         });
     }
 
-    /**
-     * 使用SharedPreferences保存用户登录信息
-     *
-     * @param context
-     * @param user
-     * @param psw2
-     */
-    public static void saveLoginInfo(Context context, String user, String psw2) {
-        //获取SharedPreferences对象
-        SharedPreferences sharedPre = context.getSharedPreferences("config", context.MODE_PRIVATE);
-        //获取Editor对象
-        SharedPreferences.Editor editor = sharedPre.edit();
-        //设置参数
-        editor.putString("username", user);
-        editor.putString("password", psw2);
-        //提交
-        editor.commit();
-    }
 }
